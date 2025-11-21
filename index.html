@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Cristian Camilo Aranda</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --hover: #0ea5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border: 1px solid var(--accent);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            color: var(--bg-color);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            color: var(--accent);
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #334155;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .project-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .project-tech {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid #334155;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cristian Camilo Aranda</h1>
+        <h2>Ingeniero de Sistemas | Administrador Linux</h2>
+        <div class="social-links">
+            <a href="mailto:ccaranda.sandoval@gmail.com">Email</a>
+            <!-- Agrega tus enlaces de LinkedIn y GitHub aquí si los tienes -->
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Perfil -->
+        <section id="perfil">
+            <h3>Sobre Mí</h3>
+            <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                Ingeniero de Sistemas especializado en la administración, seguridad y automatización de entornos GNU/Linux. 
+                Con experiencia práctica en el despliegue de servicios críticos (Correo, Web, Bases de Datos), 
+                scripting en Bash y seguridad perimetral. Capaz de traducir requerimientos teóricos en infraestructuras 
+                funcionales y seguras, demostrando una fuerte capacidad de documentación y resolución de problemas.
+            </p>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="skills">
+            <h3>Stack Tecnológico</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">Linux (Ubuntu/CentOS/Debian)</span>
+                <span class="skill-tag">Bash Scripting</span>
+                <span class="skill-tag">Postfix & Dovecot</span>
+                <span class="skill-tag">Apache & Nginx</span>
+                <span class="skill-tag">MySQL / MariaDB</span>
+                <span class="skill-tag">Seguridad (GPG/SSH)</span>
+                <span class="skill-tag">Firewall (Endian/IPTables)</span>
+                <span class="skill-tag">VirtualBox</span>
+                <span class="skill-tag">Networking (TCP/IP)</span>
+                <span class="skill-tag">ISPConfig</span>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <h3>Proyectos Destacados</h3>
+            <div class="projects-grid">
+                
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <h4>🔒 Automatización y Seguridad de Datos</h4>
+                    <p>Desarrollo de scripts en Bash para automatizar tareas de mantenimiento y respaldo. Se implementó cifrado asimétrico con GPG para proteger la información sensible antes de su transferencia segura.</p>
+                    <div class="project-tech">Tech: Bash, GPG, SSH, Rsync, Cron</div>
+                    <br>
+                    <ul>
+                        <li>Automatización de backups comprimidos.</li>
+                        <li>Cifrado de archivos para seguridad.</li>
+                        <li>Sincronización remota de servidores.</li>
+                    </ul>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <h4>📧 Servidor de Correo Corporativo</h4>
+                    <p>Implementación desde cero de un servidor de correo electrónico funcional en un entorno virtualizado, simulando infraestructura empresarial con dominios locales.</p>
+                    <div class="project-tech">Tech: Postfix, Dovecot, Maildir, Thunderbird</div>
+                    <br>
+                    <ul>
+                        <li>Configuración de MTA (Postfix) y MDA.</li>
+                        <li>Protocolos IMAP/POP3 con Dovecot.</li>
+                        <li>Gestión de buzones y usuarios virtuales.</li>
+                    </ul>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <h4>🌐 Hosting y Servicios Web (ISPConfig)</h4>
+                    <p>Despliegue de un panel de control de hosting open source para la gestión centralizada de servicios web, bases de datos y correo (Stack LAMP completo).</p>
+                    <div class="project-tech">Tech: ISPConfig, Apache, PHP, MySQL, Systemd</div>
+                    <br>
+                    <ul>
+                        <li>Instalación de servidor web y DB.</li>
+                        <li>Integración de formulario PHP + MySQL.</li>
+                        <li>Gestión avanzada de permisos web.</li>
+                    </ul>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <h4>🛡️ Seguridad Perimetral & Hardening</h4>
+                    <p>Diseño de arquitectura de seguridad de red utilizando un Firewall perimetral para proteger servicios internos y establecer una Zona Desmilitarizada (DMZ).</p>
+                    <div class="project-tech">Tech: Endian Firewall, IPTables, GRUB</div>
+                    <br>
+                    <ul>
+                        <li>Segmentación de red (GREEN/ORANGE).</li>
+                        <li>Filtrado de paquetes y bloqueo ICMP.</li>
+                        <li>Gestión del proceso de arranque (GRUB).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Educación -->
+        <section id="educacion">
+            <h3>Formación Académica</h3>
+            <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent);">
+                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Diplomado de Profundización en Linux</h4>
+                <p style="color: var(--text-secondary);">Universidad Nacional Abierta y a Distancia (UNAD) - 2025</p>
+                <p style="margin-top: 10px; font-size: 0.95rem;">Especialización técnica enfocada en la certificación Linux Essentials (LPI), administración de servicios, automatización y seguridad de sistemas open source.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Cristian Camilo Aranda. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
