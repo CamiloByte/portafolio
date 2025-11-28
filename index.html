@@ -3,275 +3,656 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Cristian Camilo Aranda</title>
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --accent: #38bdf8;
-            --hover: #0ea5e9;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        /* Header Section */
-        header {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            margin: 0 15px;
-            padding: 10px 20px;
-            border: 1px solid var(--accent);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: var(--accent);
-            color: var(--bg-color);
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 1rem;
-            margin-bottom: 2rem;
-            color: var(--text-primary);
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background-color: var(--card-bg);
-            color: var(--accent);
-            padding: 8px 16px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid #334155;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid #334155;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
-
-        .project-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-        }
-
-        .project-tech {
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-            border-top: 1px solid #334155;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <title>Cristian Camilo Aranda | Linux System Administrator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>Cristian Camilo Aranda</h1>
-        <h2>Ingeniero de Sistemas | Administrador Linux</h2>
-        <div class="social-links">
-            <a href="mailto:ccaranda.sandoval@gmail.com">Email</a>
-            <!-- Agrega tus enlaces de LinkedIn y GitHub aquí si los tienes -->
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="terminal-prompt">sysadmin@cristian:~$</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#perfil">./PERFIL</a></li>
+                <li><a href="#estudios">./ESTUDIOS</a></li>
+                <li><a href="#habilidades">./HABILIDADES</a></li>
+                <li><a href="#proyectos">./PROYECTOS</a></li>
+                <li><a href="#contacto">./CONTACTO</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <div class="container">
-        
-        <!-- Perfil -->
-        <section id="perfil">
-            <h3>Sobre Mí</h3>
-            <p style="color: var(--text-secondary); font-size: 1.1rem;">
-                Ingeniero de Sistemas especializado en la administración, seguridad y automatización de entornos GNU/Linux. 
-                Con experiencia práctica en el despliegue de servicios críticos (Correo, Web, Bases de Datos), 
-                scripting en Bash y seguridad perimetral. Capaz de traducir requerimientos teóricos en infraestructuras 
-                funcionales y seguras, demostrando una fuerte capacidad de documentación y resolución de problemas.
-            </p>
-        </section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">root@server: ~</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">root@server:~$</span> cat /etc/profile_info</p>
+                    <p class="terminal-output">NAME="Cristian Camilo Aranda"</p>
+                    <p class="terminal-output">ROLE="Linux System Administrator Junior"</p>
+                    <p class="terminal-output">SPECIALIZATION="Infrastructure • Security • Automation"</p>
+                    <p class="terminal-output">CERTIFICATION="LPI Linux Essentials (En proceso)"</p>
+                    <p class="terminal-output status-ready">STATUS="🟢 Disponible para contratación"</p>
+                    <br>
+                    <p class="terminal-line"><span class="prompt">root@server:~$</span> ./show_skills.sh</p>
+                    <p class="terminal-output success">✓ Postfix + Dovecot (Mail Server)</p>
+                    <p class="terminal-output success">✓ Endian Firewall (Network Security)</p>
+                    <p class="terminal-output success">✓ ISPConfig + LAMP (Web Hosting)</p>
+                    <p class="terminal-output success">✓ GPG + SSH (Encrypted Backups)</p>
+                    <p class="terminal-output success">✓ Bash Scripting (Automation)</p>
+                    <br>
+                    <p class="terminal-line"><span class="prompt">root@server:~$</span> ls ~/projects/</p>
+                    <p class="terminal-output link">postfix-dovecot-mail-server/</p>
+                    <p class="terminal-output link">endian-firewall-security/</p>
+                    <p class="terminal-output link">ispconfig-lamp-hosting/</p>
+                    <p class="terminal-output link">automated-encrypted-backups/</p>
+                    <p class="terminal-cursor">█</p>
+                </div>
+            </div>
 
-        <!-- Habilidades -->
-        <section id="skills">
-            <h3>Stack Tecnológico</h3>
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    OPEN TO WORK • LINUX ESSENTIALS
+                </div>
+                <h1 class="hero-title">
+                    Cristian Camilo Aranda<br>
+                    <span class="gradient-text">Linux System Administrator</span>
+                </h1>
+                <p class="hero-description">
+                    Ingeniero de Sistemas especializado en administración de entornos GNU/Linux. 
+                    Combino conocimientos de infraestructura y seguridad con habilidades de 
+                    desarrollo para automatizar y optimizar operaciones TI.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">
+                        <span class="btn-icon">▶</span> Ver Proyectos
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        <span class="btn-icon">✉</span> Contactar
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <span class="btn-icon">📄</span> Descargar CV
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll down</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- PERFIL SECTION -->
+    <section id="perfil" class="section perfil">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">$ cat ~/about.txt</span>
+                <h2 class="section-title">Perfil Profesional</h2>
+            </div>
+
+            <div class="perfil-content">
+                <div class="perfil-main">
+                    <p class="perfil-intro">
+                        Administrador de Sistemas Linux Junior con experiencia práctica 
+                        desplegando servicios de red, implementando seguridad perimetral 
+                        y automatizando infraestructura.
+                    </p>
+
+                    <div class="specialization-grid">
+                        <div class="spec-card">
+                            <div class="spec-icon">🖥️</div>
+                            <h3>Administración de Servidores</h3>
+                            <p>Postfix, Dovecot, Apache, MySQL, ISPConfig</p>
+                        </div>
+                        <div class="spec-card">
+                            <div class="spec-icon">🔒</div>
+                            <h3>Seguridad de Red</h3>
+                            <p>Firewall (Endian/IPTables), DMZ, segmentación</p>
+                        </div>
+                        <div class="spec-card">
+                            <div class="spec-icon">⚙️</div>
+                            <h3>Automatización & Scripting</h3>
+                            <p>Bash, Python, backups cifrados, sincronización SSH</p>
+                        </div>
+                        <div class="spec-card">
+                            <div class="spec-icon">🐧</div>
+                            <h3>Entornos Linux</h3>
+                            <p>Ubuntu Server, CentOS, virtualización (VirtualBox)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="perfil-sidebar">
+                    <div class="info-card">
+                        <h3>📍 Ubicación</h3>
+                        <p>Villavicencio, Meta, Colombia</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🌐 Disponibilidad</h3>
+                        <p>Remoto, Híbrido, Presencial</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>💼 Buscando</h3>
+                        <p>Linux SysAdmin Junior<br>DevOps Trainee<br>Infrastructure Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTUDIOS SECTION -->
+    <section id="estudios" class="section estudios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">$ ls ~/education/</span>
+                <h2 class="section-title">Formación Académica</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">En curso</div>
+                        <h3>Ingeniería de Sistemas</h3>
+                        <p class="timeline-institution">Universidad Nacional Abierta y a Distancia (UNAD)</p>
+                        <p class="timeline-date">2021 - Presente</p>
+                        <ul class="timeline-details">
+                            <li>102 de 155 créditos completados</li>
+                            <li>Promedio: 4.35/5.0 en últimos periodos</li>
+                            <li>Áreas: Bases de datos distribuidas, Arquitectura empresarial, Servicios en la nube</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge active">En certificación</div>
+                        <h3>LPI Linux Essentials</h3>
+                        <p class="timeline-institution">Linux Professional Institute</p>
+                        <p class="timeline-date">2024 - 2025</p>
+                        <ul class="timeline-details">
+                            <li>Certificación internacional reconocida en 180+ países</li>
+                            <li>Administración de sistemas Linux</li>
+                            <li>Línea de comandos y scripting Bash</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Completado</div>
+                        <h3>Diplomado Administración Sistemas Open Source</h3>
+                        <p class="timeline-institution">Universidad Nacional Abierta y a Distancia (UNAD)</p>
+                        <p class="timeline-date">2024 - 2025</p>
+                        <ul class="timeline-details">
+                            <li>Certificación en Linux</li>
+                            <li>7 módulos prácticos completados</li>
+                            <li>Proyectos de infraestructura real</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Técnico en Análisis y Desarrollo de Sistemas</h3>
+                        <p class="timeline-institution">SENA</p>
+                        <p class="timeline-date">2016 - 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES SECTION -->
+    <section id="habilidades" class="section habilidades">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">$ cat /proc/skills</span>
+                <h2 class="section-title">Stack Tecnológico</h2>
+            </div>
+
             <div class="skills-grid">
-                <span class="skill-tag">Linux (Ubuntu/CentOS/Debian)</span>
-                <span class="skill-tag">Bash Scripting</span>
-                <span class="skill-tag">Postfix & Dovecot</span>
-                <span class="skill-tag">Apache & Nginx</span>
-                <span class="skill-tag">MySQL / MariaDB</span>
-                <span class="skill-tag">Seguridad (GPG/SSH)</span>
-                <span class="skill-tag">Firewall (Endian/IPTables)</span>
-                <span class="skill-tag">VirtualBox</span>
-                <span class="skill-tag">Networking (TCP/IP)</span>
-                <span class="skill-tag">ISPConfig</span>
+                <div class="skill-category">
+                    <h3>Sistemas Operativos</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Ubuntu Server 22.04</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CentOS / Rocky Linux</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Debian</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Servicios & Aplicaciones</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Postfix (SMTP)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Dovecot (IMAP/POP3)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Apache / Nginx</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MySQL / MariaDB</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Seguridad & Redes</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Firewall (Endian/IPTables)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">GPG (Cifrado)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SSH (Admin remota)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Automatización & Scripting</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Bash Scripting</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python (Básico)</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Git / GitHub</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Proyectos -->
-        <section id="proyectos">
-            <h3>Proyectos Destacados</h3>
-            <div class="projects-grid">
-                
-                <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <h4>🔒 Automatización y Seguridad de Datos</h4>
-                    <p>Desarrollo de scripts en Bash para automatizar tareas de mantenimiento y respaldo. Se implementó cifrado asimétrico con GPG para proteger la información sensible antes de su transferencia segura.</p>
-                    <div class="project-tech">Tech: Bash, GPG, SSH, Rsync, Cron</div>
-                    <br>
-                    <ul>
-                        <li>Automatización de backups comprimidos.</li>
-                        <li>Cifrado de archivos para seguridad.</li>
-                        <li>Sincronización remota de servidores.</li>
-                    </ul>
-                </div>
-
-                <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <h4>📧 Servidor de Correo Corporativo</h4>
-                    <p>Implementación desde cero de un servidor de correo electrónico funcional en un entorno virtualizado, simulando infraestructura empresarial con dominios locales.</p>
-                    <div class="project-tech">Tech: Postfix, Dovecot, Maildir, Thunderbird</div>
-                    <br>
-                    <ul>
-                        <li>Configuración de MTA (Postfix) y MDA.</li>
-                        <li>Protocolos IMAP/POP3 con Dovecot.</li>
-                        <li>Gestión de buzones y usuarios virtuales.</li>
-                    </ul>
-                </div>
-
-                <!-- Proyecto 3 -->
-                <div class="project-card">
-                    <h4>🌐 Hosting y Servicios Web (ISPConfig)</h4>
-                    <p>Despliegue de un panel de control de hosting open source para la gestión centralizada de servicios web, bases de datos y correo (Stack LAMP completo).</p>
-                    <div class="project-tech">Tech: ISPConfig, Apache, PHP, MySQL, Systemd</div>
-                    <br>
-                    <ul>
-                        <li>Instalación de servidor web y DB.</li>
-                        <li>Integración de formulario PHP + MySQL.</li>
-                        <li>Gestión avanzada de permisos web.</li>
-                    </ul>
-                </div>
-
-                <!-- Proyecto 4 -->
-                <div class="project-card">
-                    <h4>🛡️ Seguridad Perimetral & Hardening</h4>
-                    <p>Diseño de arquitectura de seguridad de red utilizando un Firewall perimetral para proteger servicios internos y establecer una Zona Desmilitarizada (DMZ).</p>
-                    <div class="project-tech">Tech: Endian Firewall, IPTables, GRUB</div>
-                    <br>
-                    <ul>
-                        <li>Segmentación de red (GREEN/ORANGE).</li>
-                        <li>Filtrado de paquetes y bloqueo ICMP.</li>
-                        <li>Gestión del proceso de arranque (GRUB).</li>
-                    </ul>
-                </div>
-
+    <!-- PROYECTOS SECTION -->
+    <section id="proyectos" class="section proyectos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">$ ls -la ~/projects/</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
             </div>
-        </section>
 
-        <!-- Educación -->
-        <section id="educacion">
-            <h3>Formación Académica</h3>
-            <div style="background: var(--card-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent);">
-                <h4 style="color: var(--text-primary); margin-bottom: 0.5rem;">Diplomado de Profundización en Linux</h4>
-                <p style="color: var(--text-secondary);">Universidad Nacional Abierta y a Distancia (UNAD) - 2025</p>
-                <p style="margin-top: 10px; font-size: 0.95rem;">Especialización técnica enfocada en la certificación Linux Essentials (LPI), administración de servicios, automatización y seguridad de sistemas open source.</p>
+            <!-- PROYECTO 1: MAIL SERVER -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon mail">📧</div>
+                    <div class="project-title-group">
+                        <h3>Servidor de Correo Corporativo Seguro</h3>
+                        <span class="project-category">INFRAESTRUCTURA CRÍTICA</span>
+                    </div>
+                </div>
+
+                <p class="project-description">
+                    Implementación completa de servidor de correo electrónico en entorno Linux, 
+                    gestionando protocolos de transmisión y buzones con autenticación segura.
+                </p>
+
+                <div class="project-features">
+                    <h4>IMPLEMENTACIÓN TÉCNICA</h4>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Postfix (SMTP) para transmisión de correos</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Dovecot (IMAP/POP3) para acceso a buzones</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>3 cuentas funcionales con autenticación segura</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Red interna virtualizada (segmentación servidor/cliente)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Thunderbird como cliente gráfico para pruebas</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Formato Maildir para gestión eficiente de buzones</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-results">
+                    <h4>🎯 RESULTADOS</h4>
+                    <ul>
+                        <li>12+ correos enviados/recibidos exitosamente</li>
+                        <li>0% pérdida de mensajes en pruebas</li>
+                        <li>Logs completos para troubleshooting</li>
+                        <li>Autenticación funcional para 3 usuarios</li>
+                    </ul>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">#Postfix</span>
+                    <span class="tag">#Dovecot</span>
+                    <span class="tag">#Linux</span>
+                    <span class="tag">#SMTP/IMAP</span>
+                    <span class="tag">#Logs</span>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/cristian-aranda/postfix-dovecot-mail-server" class="btn btn-github" target="_blank">
+                        <span>🔗</span> Ver en GitHub
+                    </a>
+                    <a href="#" class="btn btn-demo">
+                        <span>📸</span> Ver Capturas
+                    </a>
+                    <a href="#" class="btn btn-docs">
+                        <span>📖</span> Documentación
+                    </a>
+                </div>
             </div>
-        </section>
 
-    </div>
+            <!-- PROYECTO 2: FIREWALL -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon security">🔒</div>
+                    <div class="project-title-group">
+                        <h3>Arquitectura de Seguridad Perimetral</h3>
+                        <span class="project-category">CIBERSEGURIDAD & REDES</span>
+                    </div>
+                </div>
 
-    <footer>
-        <p>© 2025 Cristian Camilo Aranda. Todos los derechos reservados.</p>
-    </footer>
+                <p class="project-description">
+                    Diseño e implementación de esquema de seguridad de red con Endian Firewall 
+                    para proteger servicios expuestos y segmentar tráfico entre zonas.
+                </p>
 
-</body>
-</html>
+                <div class="project-features">
+                    <h4>IMPLEMENTACIÓN TÉCNICA</h4>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Segmentación de red: VERDE (LAN) ↔ NARANJA (DMZ)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Reglas Inter-Zone para HTTP (80) y FTP (21)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Bloqueo de ICMP/Ping para prevenir reconocimiento</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Análisis del proceso de arranque (Systemd/GRUB)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Hardening básico del sistema operativo</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Verificación con herramientas de red (curl, telnet, ping)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-results">
+                    <h4>🎯 RESULTADOS</h4>
+                    <ul>
+                        <li>HTTP/FTP accesibles (verificado con curl/telnet)</li>
+                        <li>ICMP bloqueado (100% pérdida de paquetes en ping)</li>
+                        <li>Tráfico filtrado correctamente entre zonas</li>
+                        <li>Sistema protegido contra escaneos básicos</li>
+                    </ul>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">#Firewall</span>
+                    <span class="tag">#DMZ</span>
+                    <span class="tag">#Networking</span>
+                    <span class="tag">#Systemd</span>
+                    <span class="tag">#Hardening</span>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/cristian-aranda/endian-firewall-security" class="btn btn-github" target="_blank">
+                        <span>🔗</span> Ver en GitHub
+                    </a>
+                    <a href="#" class="btn btn-demo">
+                        <span>📸</span> Ver Capturas
+                    </a>
+                    <a href="#" class="btn btn-docs">
+                        <span>📖</span> Documentación
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 3: LAMP HOSTING -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon hosting">🌐</div>
+                    <div class="project-title-group">
+                        <h3>Infraestructura de Hosting Web (LAMP)</h3>
+                        <span class="project-category">ADMINISTRACIÓN DE SISTEMAS</span>
+                    </div>
+                </div>
+
+                <p class="project-description">
+                    Despliegue de plataforma completa de gestión de hosting web y bases de datos, 
+                    simulando entorno de proveedor de servicios de internet.
+                </p>
+
+                <div class="project-features">
+                    <h4>IMPLEMENTACIÓN TÉCNICA</h4>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>ISPConfig: Panel de control centralizado</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Apache/Nginx: Servidores web con virtual hosts</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>MySQL: Gestión de bases de datos</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>PHP: Formulario con captura de datos y emails</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Virtualización: Entorno Ubuntu Server completo</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>DNS local y gestión de dominios virtualizados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-results">
+                    <h4>🎯 RESULTADOS</h4>
+                    <ul>
+                        <li>Stack LAMP funcional al 100%</li>
+                        <li>Formulario PHP → MySQL → Email integrado</li>
+                        <li>DNS local y virtualización de entornos</li>
+                        <li>Gestión multi-sitio con ISPConfig</li>
+                    </ul>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">#ISPConfig</span>
+                    <span class="tag">#Apache</span>
+                    <span class="tag">#MySQL</span>
+                    <span class="tag">#PHP</span>
+                    <span class="tag">#VirtualBox</span>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/cristian-aranda/ispconfig-lamp-hosting" class="btn btn-github" target="_blank">
+                        <span>🔗</span> Ver en GitHub
+                    </a>
+                    <a href="#" class="btn btn-demo">
+                        <span>📸</span> Ver Capturas
+                    </a>
+                    <a href="#" class="btn btn-docs">
+                        <span>📖</span> Documentación
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROYECTO 4: BACKUPS -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon automation">💾</div>
+                    <div class="project-title-group">
+                        <h3>Automatización de Backups Cifrados</h3>
+                        <span class="project-category">DEVOPS & SCRIPTING</span>
+                    </div>
+                </div>
+
+                <p class="project-description">
+                    Scripts para automatizar backups comprimidos y cifrados, con sincronización 
+                    remota segura y gestión de usuarios en servidores Linux.
+                </p>
+
+                <div class="project-features">
+                    <h4>IMPLEMENTACIÓN TÉCNICA</h4>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Automatización de backups con cifrado GPG (AES256)</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Compresión tar/gzip para optimizar almacenamiento</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Sincronización remota vía SSH/rsync</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Scripts Bash para gestión masiva de usuarios</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Python para análisis de logs del sistema</span>
+                        </div>
+                        <div class="feature">
+                            <span class="check">✓</span>
+                            <span>Programación con cron para ejecución automática</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-results">
+                    <h4>🎯 RESULTADOS</h4>
+                    <ul>
+                        <li>Backups automáticos con cifrado AES256</li>
+                        <li>Sincronización remota vía SSH funcional</li>
+                        <li>Scripts reutilizables y bien documentados</li>
+                        <li>Reducción de tareas manuales repetitivas</li>
+                    </ul>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag">#Bash</span>
+                    <span class="tag">#ShellScripting</span>
+                    <span class="tag">#GPG</span>
+                    <span class="tag">#Cron</span>
+                    <span class="tag">#Python</span>
+                </div>
+
+                <div class="project-buttons">
+                    <a href="https://github.com/cristian-aranda/automated-encrypted-backups" class="btn btn-github" target="_blank">
+                        <span>🔗</span> Ver en GitHub
+                    </a>
+                    <a href="#" class="btn btn-demo">
+                        <span>📸</span> Ver Capturas
+                    </a>
+                    <a href="#" class="btn btn-docs">
+                        <span>📖</span> Documentación
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO SECTION -->
+    <section id="contacto" class="section contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">$ whoami && pwd</span>
+                <h2 class="section-title">¿Hablamos de Infraestructura?</h2>
+            </div>
+
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <p class="contacto-lead">
+                        Disponible para roles de <strong>SysAdmin Junior</strong>, 
+                        <strong>Soporte L2</strong> o <strong>Analista de Infraestructura</strong> 
+                        en Colombia.
+                    </p>
+
+                    <div class="contacto-details">
+                        <div class="detail-group">
+                            <h3>
